@@ -9,6 +9,8 @@ const rev = PIN_GPIO_3
 const put = PIN_GPIO_2
 var a, b int
 func main(){
+	a=0
+	b=100
 	WiringPiSetup()
 	PinMode(pwm, OUTPUT)
 	PinMode(put, OUTPUT)
@@ -20,11 +22,7 @@ func main(){
 		fmt.Scanf("%d %d",&a,&b)
 		fmt.Printf("ok\n")
 	}
-	PinMode(pwm,1)
-	PinMode(put,1)
-	DigitalWrite(pwm,1)
-	DigitalWrite(put,1)
-	Delay(10000)
+	DigitalWrite(pwm,0)
 }
 
 func run(){
