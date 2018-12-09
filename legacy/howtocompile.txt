@@ -1,0 +1,2 @@
+gcc -lwiringPi -lpthread -lm (C filename).c -o (OutputFilename)
+g++ -lwiringPi -lpthread -lm (C filename).cpp -o (OutputFilename) -std=c++0x
